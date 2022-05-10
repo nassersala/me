@@ -32,7 +32,7 @@ The following chooses first and last items from *x* and the middle two from *y*:
 1 44 55 4
 ```
 
-The following half the input only if it is even:
+The following halves the input only if it is even:
 ```
   halfIfEven=: %1+0=2|]
   halfIfEven 13 20
