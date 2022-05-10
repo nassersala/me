@@ -1,0 +1,40 @@
+<h1 id="loopless-programming-in-j">Loopless Programming in J</h1>
+<p>The following code states that if an item in <em>data</em> is less than 5, make it 5, otherwise, leave it unchanged:</p>
+<pre><code>  data =: 3 5 7 33
+  data &gt;. 5
+5 5 7 33</code></pre>
+<p>Here, we add one if the <em>data</em> item is either 3 or 7:</p>
+<pre><code>  data =: 3 5 7 33
+  data+data e.3 7
+4 5 8 33</code></pre>
+<p>The reason being <em>e.</em> verb returns boolean vector which has the shape of the left argument. If we wanted to add two instead we have to multiply the boolean vector by 2:</p>
+<pre><code>  data =: 3 5 7 33
+  data+2*data e.3 7
+5 5 9 33</code></pre>
+<h2 id="merging-arrays-by-multiplying-the-mask-and-addition">Merging arrays by multiplying the mask and addition</h2>
+<p>The following chooses first and last items from <em>x</em> and the middle two from <em>y</em>:</p>
+<pre><code>  x=:    1 2 3 4
+  y=:    33 44 55 66
+  mask=: 1 0 0 1
+  (x*mask) + y*-.mask
+1 44 55 4</code></pre>
+<p>The following half the input only if it is even:</p>
+<pre><code>  halfIfEven=: %1+0=2|]
+  halfIfEven 13 20
+13 10</code></pre>
+<h2 id="greaterthan-is-left-but-not-right">greaterThan is <em>left but not right</em></h2>
+<pre><code>  word =. &#39;eleemosynary&#39;
+  &#39;e&#39; = word                         NB. locations of &#39;e&#39;
+1 0 1 1 0 0 0 0 0 0 0 0
+  &#39;ee&#39; E. word                       NB. locations of &#39;ee&#39;
+0 0 1 0 0 0 0 0 0 0 0 0
+  (&#39;e&#39; = word) &gt; (&#39;ee&#39; E. word)      NB. &#39;e&#39; but not &#39;ee&#39;
+1 0 0 1 0 0 0 0 0 0 0 0
+   +/ (&#39;e&#39; = word) &gt; (&#39;ee&#39; E. word)   NB. how many of them?
+2</code></pre>
+<h2 id="the-power-function-is-where-as-in-sql">The power function is <em>Where</em> as in sql</h2>
+<p>Business rule: increase the salaries by 5% if the salary category is A:</p>
+<pre><code>  groups=:&#39;ABAC&#39;
+  salaries=: 30000 32000 10000 13000
+  salaries * 1.05 ^ groups = &#39;A&#39;
+31500 32000 10500 13000</code></pre>
