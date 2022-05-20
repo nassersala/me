@@ -1,0 +1,18 @@
+<h1 id="simple-php-todo-app-with-redirection">Simple PHP todo app with redirection</h1>
+<pre><code>==&gt; action.php &lt;==
+&lt;html&gt;&lt;head&gt;&lt;meta http-equiv=&#39;refresh&#39; content=&#39;0; URL=/&#39;&gt;&lt;/head&gt;
+&lt;body align=&quot;center&quot;&gt;&lt;?php `echo {$_GET[&quot;2do&quot;]} &gt;&gt;todos` ?&gt;&lt;/body&gt;
+&lt;/html&gt;
+
+==&gt; index.php &lt;==
+&lt;!doctype html&gt;
+&lt;html&gt;
+  &lt;body align=&quot;center&quot;&gt;
+  &lt;?php echo `cat todos` ?&gt;
+  &lt;form action=&quot;/action.php&quot;&gt;
+    &lt;input type=&quot;text&quot; name=&quot;2do&quot; value=&quot;go to gym&quot;&gt;
+    &lt;input type=&quot;submit&quot; value=&quot;Add&quot;&gt;
+  &lt;/form&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>Run the web server with: <code>php -S localhost:8000</code></p>
