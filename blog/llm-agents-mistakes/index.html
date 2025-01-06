@@ -8,22 +8,28 @@
       
       
       
+        <link rel="canonical" href="https://example.com/blog/llm-agents-mistakes/">
       
       
+        <link rel="prev" href="../..">
       
-      <link rel="icon" href="/assets/images/favicon.png">
+      
+        <link rel="next" href="../functional-programming-in-ai-apps/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
     
     
       
-        <title>Nasser Ali</title>
+        <title>LLM Agents Mistakes - Nasser Ali</title>
       
     
     
-      <link rel="stylesheet" href="/assets/stylesheets/main.6f8fc17f.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6f8fc17f.min.css">
       
         
-        <link rel="stylesheet" href="/assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -42,7 +48,7 @@
       
     
     
-    <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -65,6 +71,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#10-mistakes-to-avoid-when-designing-llm-based-ai-agents" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -75,7 +86,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/." title="Nasser Ali" class="md-header__button md-logo" aria-label="Nasser Ali" data-md-component="logo">
+    <a href="../.." title="Nasser Ali" class="md-header__button md-logo" aria-label="Nasser Ali" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -95,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              LLM Agents Mistakes
             
           </span>
         </div>
@@ -164,7 +175,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/." class="md-tabs__link">
+      <a href="../.." class="md-tabs__link">
         
   
     
@@ -179,11 +190,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="/blog/llm-agents-mistakes/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
           
   
     
@@ -201,7 +214,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/notes/" class="md-tabs__link">
+      <a href="../../notes/" class="md-tabs__link">
         
   
     
@@ -218,7 +231,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/consulting/" class="md-tabs__link">
+      <a href="../../consulting/" class="md-tabs__link">
         
   
     
@@ -235,7 +248,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/oss/" class="md-tabs__link">
+      <a href="../../oss/" class="md-tabs__link">
         
   
     
@@ -252,7 +265,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/papers/" class="md-tabs__link">
+      <a href="../../papers/" class="md-tabs__link">
         
   
     
@@ -288,7 +301,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/." title="Nasser Ali" class="md-nav__button md-logo" aria-label="Nasser Ali" data-md-component="logo">
+    <a href="../.." title="Nasser Ali" class="md-nav__button md-logo" aria-label="Nasser Ali" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -306,7 +319,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -323,8 +336,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -337,19 +352,22 @@
     
     
       
+        
+        
+      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -360,7 +378,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Blog
@@ -371,10 +389,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/blog/llm-agents-mistakes/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    LLM Agents Mistakes
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -383,6 +421,116 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-lack-of-clear-objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Lack of Clear Objectives
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-ignoring-user-experience" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Ignoring User Experience
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-overcomplicating-the-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Overcomplicating the Design
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-insufficient-prompt-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Insufficient Prompt Design
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-neglecting-context-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Neglecting Context Handling
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-overestimating-llm-capabilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Overestimating LLM Capabilities
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-lack-of-continuous-feedback-loops" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Lack of Continuous Feedback Loops
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-security-and-privacy-oversights" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Security and Privacy Oversights
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-failure-to-test-for-edge-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Failure to Test for Edge Cases
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-neglecting-integration-with-existing-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. Neglecting Integration with Existing Systems
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -395,7 +543,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/blog/functional-programming-in-ai-apps/" class="md-nav__link">
+      <a href="../functional-programming-in-ai-apps/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -416,7 +564,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/blog/validating-llms-with-functional-programming/" class="md-nav__link">
+      <a href="../validating-llms-with-functional-programming/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -444,7 +592,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/notes/" class="md-nav__link">
+      <a href="../../notes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -464,7 +612,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/consulting/" class="md-nav__link">
+      <a href="../../consulting/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -484,7 +632,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/oss/" class="md-nav__link">
+      <a href="../../oss/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -504,7 +652,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/papers/" class="md-nav__link">
+      <a href="../../papers/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -529,8 +677,57 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+
+<h1 id="10-mistakes-to-avoid-when-designing-llm-based-ai-agents">10 Mistakes to Avoid When Designing LLM-Based AI Agents</h1>
+<p>AI agents powered by Large Language Models (LLMs) are versatile and powerful tools, but designing them effectively requires careful thought. Many projects fail because of simple, avoidable mistakes. Here’s a practical guide to ensure your LLM-based agents deliver on their promise.</p>
+<hr />
+<h2 id="1-lack-of-clear-objectives">1. Lack of Clear Objectives</h2>
+<p>Define the agent’s purpose. Be specific. A customer support bot isn’t the same as a creative writing assistant. Align the agent’s tasks with measurable success metrics.</p>
+<hr />
+<h2 id="2-ignoring-user-experience">2. Ignoring User Experience</h2>
+<p>Your agent’s responses must be clear and concise. Avoid overwhelming users with verbose answers or irrelevant suggestions. Test early and often with real users to refine the interaction flow.</p>
+<hr />
+<h2 id="3-overcomplicating-the-design">3. Overcomplicating the Design</h2>
+<p>Keep things simple. Leverage pre-trained models where possible and focus on core functionality. Avoid unnecessary fine-tuning unless it adds real value.</p>
+<hr />
+<h2 id="4-insufficient-prompt-design">4. Insufficient Prompt Design</h2>
+<p>The quality of your prompts determines the quality of your agent’s responses. Craft reusable, modular prompts that handle edge cases effectively.</p>
+<hr />
+<h2 id="5-neglecting-context-handling">5. Neglecting Context Handling</h2>
+<p>Don’t let your agent lose track of the conversation. Use context windows and memory mechanisms to keep interactions relevant, even in long exchanges.</p>
+<hr />
+<h2 id="6-overestimating-llm-capabilities">6. Overestimating LLM Capabilities</h2>
+<p>LLMs are not magical. They generate language, not logic. For tasks like calculations or real-time updates, integrate external tools and APIs.</p>
+<hr />
+<h2 id="7-lack-of-continuous-feedback-loops">7. Lack of Continuous Feedback Loops</h2>
+<p>Static agents grow obsolete. Use user feedback and data to refine prompts and retrain models. The best agents evolve with their users.</p>
+<hr />
+<h2 id="8-security-and-privacy-oversights">8. Security and Privacy Oversights</h2>
+<p>Handle user data responsibly. Strip out sensitive information before processing and ensure your systems are secure against misuse or leaks.<br />
+Where privacy is a priority, consider using local and private solutions like <strong>Ollama</strong> or self-hosting open-source models. These approaches ensure data stays within your control and mitigate reliance on third-party cloud services.</p>
+<hr />
+<h2 id="9-failure-to-test-for-edge-cases">9. Failure to Test for Edge Cases</h2>
+<p>What happens when users input something unexpected? Test extensively to catch biases, hallucinations, and failure modes before users do.</p>
+<hr />
+<h2 id="10-neglecting-integration-with-existing-systems">10. Neglecting Integration with Existing Systems</h2>
+<p>Your agent must fit seamlessly into existing workflows and systems. Focus on interoperability with tools like CRMs, databases, or messaging platforms.</p>
+<hr />
+<p>By avoiding these mistakes, you’ll design LLM-based agents that work effectively, delight users, and scale with your needs.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -601,10 +798,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "/", "features": ["navigation.tabs", "navigation.sections", "navigation.indexes", "toc.integrate"], "search": "/assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.indexes", "toc.integrate"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="/assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
       
     
   </body>
