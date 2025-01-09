@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://example.com/blog/validating-llms-with-functional-programming/">
+        <link rel="canonical" href="https://example.com/blog/composing-llm-apps/">
       
       
-        <link rel="prev" href="../functional-programming-in-ai-apps/">
+        <link rel="prev" href="../validating-llms-with-functional-programming/">
       
       
-        <link rel="next" href="../composing-llm-apps/">
+        <link rel="next" href="../../notes/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Validating LLM apps with FP - Nasser Ali</title>
+        <title>The Art of Composition in LLM apps - Nasser Ali</title>
       
     
     
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#validating-llm-apps-with-functional-programming" class="md-skip">
+        <a href="#the-art-of-composition-from-category-theory-to-llm-apps" class="md-skip">
           Skip to content
         </a>
       
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Validating LLM apps with FP
+              The Art of Composition in LLM apps
             
           </span>
         </div>
@@ -433,6 +433,27 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../validating-llms-with-functional-programming/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Validating LLM apps with FP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -449,7 +470,7 @@
           
   
   <span class="md-ellipsis">
-    Validating LLM apps with FP
+    The Art of Composition in LLM apps
   </span>
   
 
@@ -460,7 +481,7 @@
         
   
   <span class="md-ellipsis">
-    Validating LLM apps with FP
+    The Art of Composition in LLM apps
   </span>
   
 
@@ -482,37 +503,37 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#why-functional-programming-is-the-key" class="md-nav__link">
+  <a href="#introduction" class="md-nav__link">
     <span class="md-ellipsis">
-      Why Functional Programming is the Key
+      Introduction
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#a-practical-solution" class="md-nav__link">
+  <a href="#understanding-basic-composition" class="md-nav__link">
     <span class="md-ellipsis">
-      A Practical Solution
+      Understanding Basic Composition
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="A Practical Solution">
+    <nav class="md-nav" aria-label="Understanding Basic Composition">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#the-problem" class="md-nav__link">
+  <a href="#function-composition-the-gateway" class="md-nav__link">
     <span class="md-ellipsis">
-      The Problem
+      Function Composition: The Gateway
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#the-functional-programming-approach" class="md-nav__link">
+  <a href="#beyond-functions-compositional-thinking" class="md-nav__link">
     <span class="md-ellipsis">
-      The Functional Programming Approach
+      Beyond Functions: Compositional Thinking
     </span>
   </a>
   
@@ -524,46 +545,37 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#how-it-works" class="md-nav__link">
+  <a href="#composition-in-practice-llm-systems" class="md-nav__link">
     <span class="md-ellipsis">
-      How It Works
+      Composition in Practice: LLM Systems
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="How It Works">
+    <nav class="md-nav" aria-label="Composition in Practice: LLM Systems">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#validation-functions" class="md-nav__link">
+  <a href="#building-blocks" class="md-nav__link">
     <span class="md-ellipsis">
-      Validation Functions:
+      Building Blocks
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#higher-order-function-execute_step" class="md-nav__link">
+  <a href="#compositional-patterns" class="md-nav__link">
     <span class="md-ellipsis">
-      Higher-Order Function (execute_step):
+      Compositional Patterns
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#declarative-workflow-steps" class="md-nav__link">
+  <a href="#emergent-properties" class="md-nav__link">
     <span class="md-ellipsis">
-      Declarative Workflow (steps):
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#pure-functions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Pure Functions:
+      Emergent Properties
     </span>
   </a>
   
@@ -575,18 +587,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#why-this-matters" class="md-nav__link">
+  <a href="#conclusion" class="md-nav__link">
     <span class="md-ellipsis">
-      Why This Matters
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#your-turn" class="md-nav__link">
-    <span class="md-ellipsis">
-      Your Turn
+      Conclusion
     </span>
   </a>
   
@@ -596,27 +599,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../composing-llm-apps/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    The Art of Composition in LLM apps
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -724,114 +706,114 @@
                   
 
 
-<h1 id="validating-llm-apps-with-functional-programming">Validating LLM apps with Functional programming</h1>
-<p>Prompt chaining unlocks the power of large language models (LLMs), but how do you ensure that every step in your workflow works as expected? Errors in intermediate steps can cascade and break your entire process. leaving you frustrated and unsure of what went wrong.</p>
-<p>Functional programming (FP) provides an elegant solution. With its focus on pure functions and composable components, FP helps you build workflows that are reliable, reusable, and easy to debug. In this post, I'll show you how to use FP principles to validate and execute LLM workflows, complete with a Python tiny example.</p>
-<hr />
-<h2 id="why-functional-programming-is-the-key">Why Functional Programming is the Key</h2>
-<p>When working with LLMs, you often need to chain multiple prompts together to accomplish complex tasks. For example:</p>
+<h1 id="the-art-of-composition-from-category-theory-to-llm-apps">The Art of Composition: From Category Theory to LLM apps</h1>
+<p><em>Anthropic</em> wrote a <a href="https://www.anthropic.com/research/building-effective-agents">great piece on agents</a>, using composition to design their systems. I view it through a category theory and functional programming lens. This post shares my reflections.</p>
+<h2 id="introduction">Introduction</h2>
+<p>Compositionality finds its rigorous foundation in category theory, a branch of mathematics that studies compositional structures and patterns. Category theory goes far beyond simple function composition - it provides a unified language for describing how things compose, whether they're functions, types, data transformations, or even abstract mathematical structures. In a category, we have:</p>
 <ul>
-<li>First, generate a list of ingredients.</li>
-<li>Then, write instructions for a recipe using those ingredients.</li>
+<li>Objects (like types in programming)</li>
+<li>Morphisms (like functions, but could be any transformative relationship)</li>
+<li>Laws of composition (associativity, identity)</li>
+<li>Functors (mappings between categories)</li>
+<li>Monads (a powerful pattern for composing computations)</li>
+<li>Natural Transformations (mappings between functors)</li>
+<li>Adjunctions (pairs of functors that are opposites in a precise sense)</li>
+<li>Products and Coproducts (universal ways of combining objects)</li>
+<li>Limits and Colimits (generalizations of products and coproducts)</li>
+<li>And many more abstract patterns that capture essence of composition</li>
 </ul>
-<p>However, without validation, a minor issue in one step can result in gibberish output from the next. Functional programming solves this by:</p>
-<ol>
-<li><strong>Isolating Logic:</strong> Pure functions ensure each step is predictable and testable.</li>
-<li><strong>Encouraging Composition:</strong> You can combine smaller, reusable components to build complex workflows.</li>
-<li><strong>Improving Clarity:</strong> Declarative workflows make it easy to understand what’s happening at a glance.</li>
-</ol>
-<hr />
-<h2 id="a-practical-solution">A Practical Solution</h2>
-<p>Here’s how you can design an LLM workflow with FP principles in Python.</p>
-<h3 id="the-problem">The Problem</h3>
-<p>We want to:</p>
-<ol>
-<li><strong>Generate a list of ingredients.</strong></li>
-<li><strong>Write recipe instructions.</strong></li>
-</ol>
-<p>Each step must be validated before proceeding to the next.</p>
-<hr />
-<h3 id="the-functional-programming-approach">The Functional Programming Approach</h3>
-<p>In FP style, we:</p>
-<ol>
-<li><strong>Write Pure Functions:</strong> Each step’s logic and validation are isolated.</li>
-<li><strong>Compose the Workflow Declaratively:</strong> The process is represented as a list of steps.</li>
-<li><strong>Run and Validate Steps:</strong> Each step runs through a higher-order function that combines execution and validation.</li>
-</ol>
-<p>Below is the complete code.</p>
-<pre><code class="language-python">from typing import Callable, Dict, Tuple
+<p>While many developers first encounter composition through functional programming, understanding its category-theoretic roots reveals why compositional patterns appear everywhere - from database queries to UI components to, as we'll see, LLM systems.</p>
+<h2 id="understanding-basic-composition">Understanding Basic Composition</h2>
+<h3 id="function-composition-the-gateway">Function Composition: The Gateway</h3>
+<p>In its simplest form, function composition is writing f(g(x)) - feeding the output of one function into another. Consider this practical example:</p>
+<pre><code class="language-python">from functools import reduce
+from typing import Callable
 
-# Validation functions
-def validate_ingredients(output: str) -&gt; bool:
-    return len(output.split(&quot;\n&quot;)) &gt;= 3
+# One-liner functions
+get_user_email = lambda user: user['email']
+find_user_in_db = lambda user_id: db.find_user(user_id)
+send_welcome_email = lambda email: mailer.send(email, &quot;Welcome!&quot;)
 
-def validate_instructions(output: str) -&gt; bool:
-    return len(output.split(&quot;\n&quot;)) &gt;= 3
+# Direct composition
+welcome_new_user = lambda user_id: send_welcome_email(get_user_email(find_user_in_db(user_id)))
 
-# Mock LLM function
-def run_llm(prompt: str) -&gt; str:
-    responses = {
-        &quot;List the ingredients for a simple pasta recipe.&quot;: &quot;Pasta\nTomato sauce\nParmesan cheese&quot;,
-        &quot;Generate instructions for making the pasta with the listed ingredients.&quot;:
-            &quot;1. Boil pasta.\n2. Heat tomato sauce.\n3. Mix pasta with sauce and serve with Parmesan cheese.&quot;,
-    }
-    return responses.get(prompt, &quot;Output not available.&quot;)
+# (Optional) Compose utility 
+compose = lambda *fns: reduce(lambda f, g: lambda x: f(g(x)), fns[::-1])
 
-# Step execution with validation
-def execute_step(
-    prompt: str, 
-    validator: Callable[[str], bool]
-) -&gt; Tuple[str, str]:
-    output = run_llm(prompt)
-    if not validator(output):
-        raise ValueError(f&quot;Validation failed for prompt: {prompt}&quot;)
-    return prompt, output
-
-# Composable workflow
-def prompt_chain() -&gt; Dict[str, str]:
-    steps = [
-        (&quot;List the ingredients for a simple pasta recipe.&quot;, validate_ingredients),
-        (&quot;Generate instructions for making the pasta with the listed ingredients.&quot;, validate_instructions),
-    ]
-
-    return dict(execute_step(prompt, validator) for prompt, validator in steps)
-
-# Run the chain with FP-style composition
-try:
-    results = prompt_chain()
-    print(&quot;Workflow successful!&quot;)
-    for step, output in results.items():
-        print(f&quot;{step}:\n{output}\n&quot;)
-except ValueError as e:
-    print(e)
-
+# Usage remains clean
+welcome_new_user = compose(send_welcome_email, get_user_email, find_user_in_db)
 </code></pre>
-<h2 id="how-it-works">How It Works</h2>
-<h3 id="validation-functions">Validation Functions:</h3>
-<p>Each step has a specific validation rule. For example, the ingredient list must have at least 3 items, and the instructions must contain at least 3 steps.</p>
-<h3 id="higher-order-function-execute_step">Higher-Order Function (<code>execute_step</code>):</h3>
-<p>Combines running the LLM with validation in a reusable way. If validation fails, an error is raised immediately.</p>
-<h3 id="declarative-workflow-steps">Declarative Workflow (<code>steps</code>):</h3>
-<p>The entire process is represented as a list of <code>(prompt, validator)</code> tuples. This makes it easy to add, remove, or modify steps.</p>
-<h3 id="pure-functions">Pure Functions:</h3>
-<p>Every function is pure, relying only on its inputs and producing predictable outputs.</p>
-<hr />
-<h2 id="why-this-matters">Why This Matters</h2>
-<p>By combining FP principles with LLM workflows, you get:</p>
+<p>Each function handles one specific task, and they compose together to create a workflow. This fundamental pattern underlies much of functional programming:</p>
 <ul>
-<li><strong>Reliability:</strong> Validation catches errors early, preventing bad outputs from propagating.</li>
-<li><strong>Reusability:</strong> Each step and validation function can be reused across workflows.</li>
-<li><strong>Scalability:</strong> Adding new steps or modifying existing ones is straightforward.</li>
+<li>Pure functions that are predictable and side-effect free</li>
+<li>Building complex behavior from simple, testable units</li>
+<li>Creating new functionality through combination rather than modification</li>
 </ul>
-<hr />
-<h2 id="your-turn">Your Turn</h2>
-<p>Use the example code to:</p>
+<h3 id="beyond-functions-compositional-thinking">Beyond Functions: Compositional Thinking</h3>
+<p>Composition appears throughout software design:</p>
+<ul>
+<li>Unix pipelines combining simple tools</li>
+<li>Microservices architecture</li>
+<li>Component-based UI frameworks</li>
+<li>Protocol layering in networking</li>
+</ul>
+<p>The power lies in being able to reason about parts independently while confidently combining them into larger systems.</p>
+<h2 id="composition-in-practice-llm-systems">Composition in Practice: LLM Systems</h2>
+<p>The <a href="https://www.anthropic.com/research/building-effective-agents">article</a> from Anthropic reveals how compositionality extends naturally into AI system design. Their patterns demonstrate composition at different levels of abstraction:</p>
+<h3 id="building-blocks">Building Blocks</h3>
+<p>The foundation starts with an augmented LLM - a base unit enhanced with capabilities like:</p>
+<ul>
+<li>Retrieval</li>
+<li>Tool usage</li>
+<li>Memory systems</li>
+</ul>
+<h3 id="compositional-patterns">Compositional Patterns</h3>
+<p>These building blocks combine in increasingly sophisticated ways:</p>
 <ol>
-<li>Implement your own LLM workflows with programmatic checks.</li>
-<li>Experiment with adding new steps or validation rules.</li>
-<li>Refactor your existing prompt chains into a declarative, composable style.</li>
+<li>
+<p>Sequential Composition (Prompt Chaining)</p>
+<ul>
+<li>Direct analog to function composition</li>
+<li>Each LLM processes previous output</li>
+<li>Allows breaking complex tasks into manageable steps</li>
+</ul>
+</li>
+<li>
+<p>Parallel Composition (Parallelization)</p>
+<ul>
+<li>Multiple LLMs working simultaneously</li>
+<li>Either dividing work (sectioning) or providing multiple perspectives (voting)</li>
+<li>Results aggregated programmatically</li>
+</ul>
+</li>
+<li>
+<p>Hierarchical Composition (Orchestrator-Workers)</p>
+<ul>
+<li>Orchestrator LLM coordinates worker LLMs</li>
+<li>Dynamic task decomposition and synthesis</li>
+<li>Enables flexible, adaptive workflows</li>
+</ul>
+</li>
+<li>
+<p>Feedback Composition (Evaluator-Optimizer)</p>
+<ul>
+<li>Circular composition where output feeds back for improvement</li>
+<li>Creates iterative refinement loops</li>
+<li>Similar to optimization algorithms</li>
+</ul>
+</li>
 </ol>
-<p>Functional programming isn’t just a theoretical concept—it’s a practical tool for making your workflows bulletproof. Why settle for brittle pipelines when you can build ones that just work (and much simpler)?</p>
+<h3 id="emergent-properties">Emergent Properties</h3>
+<p>Like functional composition, these patterns yield important system properties:</p>
+<ul>
+<li>Modularity: Components can be developed and tested independently</li>
+<li>Scalability: Patterns can be nested and combined</li>
+<li>Reliability: Simple components reduce points of failure</li>
+<li>Flexibility: New capabilities through recombination</li>
+</ul>
+<h2 id="conclusion">Conclusion</h2>
+<p>The compositional patterns in LLM systems demonstrate how fundamental principles of software design evolve to meet new challenges. Just as functional programming showed how composition could make complex programs manageable, these patterns show how composition can make sophisticated AI systems tractable and reliable.</p>
+<p>The future of AI system design likely lies not in monolithic agents, but in thoughtful composition of simpler, well-understood components - proving once again that compositionality is a timeless principle in computing.</p>
 
 
 

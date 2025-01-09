@@ -2,38 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://example.com/</loc>
-         <lastmod>2025-01-06</lastmod>
+         <lastmod>2025-01-09</lastmod>
     </url>
     <url>
          <loc>https://example.com/about/</loc>
-         <lastmod>2025-01-06</lastmod>
+         <lastmod>2025-01-09</lastmod>
     </url>
     <url>
          <loc>https://example.com/consulting/</loc>
-         <lastmod>2025-01-06</lastmod>
+         <lastmod>2025-01-09</lastmod>
     </url>
     <url>
          <loc>https://example.com/notes/</loc>
-         <lastmod>2025-01-06</lastmod>
+         <lastmod>2025-01-09</lastmod>
     </url>
     <url>
          <loc>https://example.com/oss/</loc>
-         <lastmod>2025-01-06</lastmod>
+         <lastmod>2025-01-09</lastmod>
     </url>
     <url>
          <loc>https://example.com/papers/</loc>
-         <lastmod>2025-01-06</lastmod>
+         <lastmod>2025-01-09</lastmod>
+    </url>
+    <url>
+         <loc>https://example.com/blog/composing-llm-apps/</loc>
+         <lastmod>2025-01-09</lastmod>
     </url>
     <url>
          <loc>https://example.com/blog/functional-programming-in-ai-apps/</loc>
-         <lastmod>2025-01-06</lastmod>
+         <lastmod>2025-01-09</lastmod>
     </url>
     <url>
          <loc>https://example.com/blog/llm-agents-mistakes/</loc>
-         <lastmod>2025-01-06</lastmod>
+         <lastmod>2025-01-09</lastmod>
     </url>
     <url>
          <loc>https://example.com/blog/validating-llms-with-functional-programming/</loc>
-         <lastmod>2025-01-06</lastmod>
+         <lastmod>2025-01-09</lastmod>
     </url>
 </urlset>
