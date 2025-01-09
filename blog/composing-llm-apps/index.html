@@ -706,10 +706,10 @@
                   
 
 
-<h1 id="the-art-of-composition-from-category-theory-to-llm-apps">The Art of Composition: From Category Theory to LLM apps</h1>
-<p><em>Anthropic</em> wrote a <a href="https://www.anthropic.com/research/building-effective-agents">great piece on agents</a>, using composition to design their systems. I view it through a category theory and functional programming lens. This post shares my reflections.</p>
+<h1 id="the-art-of-composition-from-category-theory-to-llm-apps">The Art of Composition: From Category Theory to LLM Apps</h1>
+<p><em>Anthropic</em> wrote a <a href="https://www.anthropic.com/research/building-effective-agents">great piece on agents</a>, using composition to design their systems. I view it through a category theory and functional programming lens. This post shares my reflections on their patterns and how they align with compositional thinking.</p>
 <h2 id="introduction">Introduction</h2>
-<p>Compositionality finds its rigorous foundation in category theory, a branch of mathematics that studies compositional structures and patterns. Category theory goes far beyond simple function composition - it provides a unified language for describing how things compose, whether they're functions, types, data transformations, or even abstract mathematical structures. In a category, we have:</p>
+<p>Compositionality finds its rigorous foundation in category theory, a branch of mathematics that studies compositional structures and patterns. While Anthropic's article does not explicitly mention category theory, their approach to agent design resonates deeply with its principles. Category theory goes far beyond simple function composition - it provides a unified language for describing how things compose, whether they're functions, types, data transformations, or even abstract mathematical structures. In a category, we have:</p>
 <ul>
 <li>Objects (like types in programming)</li>
 <li>Morphisms (like functions, but could be any transformative relationship)</li>
@@ -720,12 +720,12 @@
 <li>Adjunctions (pairs of functors that are opposites in a precise sense)</li>
 <li>Products and Coproducts (universal ways of combining objects)</li>
 <li>Limits and Colimits (generalizations of products and coproducts)</li>
-<li>And many more abstract patterns that capture essence of composition</li>
+<li>And many more abstract patterns that capture the essence of composition</li>
 </ul>
 <p>While many developers first encounter composition through functional programming, understanding its category-theoretic roots reveals why compositional patterns appear everywhere - from database queries to UI components to, as we'll see, LLM systems.</p>
 <h2 id="understanding-basic-composition">Understanding Basic Composition</h2>
 <h3 id="function-composition-the-gateway">Function Composition: The Gateway</h3>
-<p>In its simplest form, function composition is writing f(g(x)) - feeding the output of one function into another. Consider this practical example:</p>
+<p>In its simplest form, function composition is writing (f(g(x))) - feeding the output of one function into another. Consider this practical example:</p>
 <pre><code class="language-python">from functools import reduce
 from typing import Callable
 
@@ -759,7 +759,7 @@ welcome_new_user = compose(send_welcome_email, get_user_email, find_user_in_db)
 </ul>
 <p>The power lies in being able to reason about parts independently while confidently combining them into larger systems.</p>
 <h2 id="composition-in-practice-llm-systems">Composition in Practice: LLM Systems</h2>
-<p>The <a href="https://www.anthropic.com/research/building-effective-agents">article</a> from Anthropic reveals how compositionality extends naturally into AI system design. Their patterns demonstrate composition at different levels of abstraction:</p>
+<p>Although not explicitly stated, the <a href="https://www.anthropic.com/research/building-effective-agents">article</a> from Anthropic reveals how compositionality extends naturally into AI system design. Their patterns demonstrate composition at different levels of abstraction. Viewed through the lens of category theory, these patterns align with principles such as associativity, modularity, and hierarchical abstraction.</p>
 <h3 id="building-blocks">Building Blocks</h3>
 <p>The foundation starts with an augmented LLM - a base unit enhanced with capabilities like:</p>
 <ul>
@@ -771,49 +771,37 @@ welcome_new_user = compose(send_welcome_email, get_user_email, find_user_in_db)
 <p>These building blocks combine in increasingly sophisticated ways:</p>
 <ol>
 <li>
-<p>Sequential Composition (Prompt Chaining)</p>
-<ul>
-<li>Direct analog to function composition</li>
-<li>Each LLM processes previous output</li>
-<li>Allows breaking complex tasks into manageable steps</li>
-</ul>
+<p><strong>Sequential Composition (Prompt Chaining)</strong>
+    Direct analog to function composition. Each LLM processes the previous output, akin to chaining morphisms in a category.
+    <em>Example</em>: Breaking a complex task into manageable steps by chaining sub-tasks.</p>
 </li>
 <li>
-<p>Parallel Composition (Parallelization)</p>
-<ul>
-<li>Multiple LLMs working simultaneously</li>
-<li>Either dividing work (sectioning) or providing multiple perspectives (voting)</li>
-<li>Results aggregated programmatically</li>
-</ul>
+<p><strong>Parallel Composition (Parallelization)</strong>
+    Multiple LLMs work simultaneously. This resembles products or coproducts in category theory, where multiple objects interact in structured ways.
+    <em>Example</em>: Dividing work among LLMs or aggregating multiple perspectives.</p>
 </li>
 <li>
-<p>Hierarchical Composition (Orchestrator-Workers)</p>
-<ul>
-<li>Orchestrator LLM coordinates worker LLMs</li>
-<li>Dynamic task decomposition and synthesis</li>
-<li>Enables flexible, adaptive workflows</li>
-</ul>
+<p><strong>Hierarchical Composition (Orchestrator-Workers)</strong>
+    Orchestrator LLM coordinates worker LLMs, a pattern reminiscent of limits and colimits for organizing and synthesizing information.
+    <em>Example</em>: Dynamically decomposing tasks into smaller, composable subtasks.</p>
 </li>
 <li>
-<p>Feedback Composition (Evaluator-Optimizer)</p>
-<ul>
-<li>Circular composition where output feeds back for improvement</li>
-<li>Creates iterative refinement loops</li>
-<li>Similar to optimization algorithms</li>
-</ul>
+<p><strong>Feedback Composition (Evaluator-Optimizer)</strong>
+    Circular composition where output feeds back for improvement, analogous to fixed points in category theory.
+    <em>Example</em>: Iterative refinement and optimization loops.</p>
 </li>
 </ol>
 <h3 id="emergent-properties">Emergent Properties</h3>
 <p>Like functional composition, these patterns yield important system properties:</p>
 <ul>
-<li>Modularity: Components can be developed and tested independently</li>
-<li>Scalability: Patterns can be nested and combined</li>
-<li>Reliability: Simple components reduce points of failure</li>
-<li>Flexibility: New capabilities through recombination</li>
+<li><strong>Modularity</strong>: Components can be developed and tested independently.</li>
+<li><strong>Scalability</strong>: Patterns can be nested and combined.</li>
+<li><strong>Reliability</strong>: Simple components reduce points of failure.</li>
+<li><strong>Flexibility</strong>: New capabilities through recombination.</li>
 </ul>
 <h2 id="conclusion">Conclusion</h2>
 <p>The compositional patterns in LLM systems demonstrate how fundamental principles of software design evolve to meet new challenges. Just as functional programming showed how composition could make complex programs manageable, these patterns show how composition can make sophisticated AI systems tractable and reliable.</p>
-<p>The future of AI system design likely lies not in monolithic agents, but in thoughtful composition of simpler, well-understood components - proving once again that compositionality is a timeless principle in computing.</p>
+<p>While Anthropic's article focuses on designing agents, viewing their approach through the lens of category theory illuminates the timeless principles underlying their patterns. The future of AI system design likely lies not in monolithic agents, but in thoughtful composition of simpler, well-understood components - proving once again that compositionality is a universal principle in computing.</p>
 
 
 
